@@ -11,11 +11,11 @@ export const Unidades = () => {
             setVisibleUnidades(entry.isIntersecting);
         }, { threshold: .3 });
 
-        
+
         observer.observe(triggerUnidades);
         return () => {
             observer.disconnect();
-            
+
             console.log('Apareci')
         }
     }, []);
@@ -47,17 +47,12 @@ export const Unidades = () => {
                     grid grid-cols-1 md:grid-cols-2
                     gap-8
                     w-full
-                    transition-discrete duration-700 ease-out
-                    ${
-                    visibleUnidades
-                    ? 'opacity-100 -translate-y-10 pointer-events-auto'
-                    : 'opacity-0 translate-y-0 pointer-events-none'
-                    }
+                    
                 `}
             >
                 {/* Unidade 1 */}
                 <div
-                    className="
+                    className={`
                         bg-white/70 backdrop-blur
                         rounded-2xl
                         p-8
@@ -65,7 +60,12 @@ export const Unidades = () => {
                         hover:shadow-md
                         transition
                         flex flex-col gap-4
-                    "
+                        transition-discrete duration-650 ease-out
+                    ${visibleUnidades
+                            ? 'opacity-100 translate-y-0 pointer-events-auto'
+                            : 'opacity-0 translate-y-30 pointer-events-none'
+                        }`}
+
                 >
                     {/* Logo (placeholder) */}
                     <div
@@ -94,7 +94,7 @@ export const Unidades = () => {
 
                 {/* Unidade 2 */}
                 <div
-                    className="
+                    className={`
                         bg-white/70 backdrop-blur
                         rounded-2xl
                         p-8
@@ -102,7 +102,13 @@ export const Unidades = () => {
                         hover:shadow-md
                         transition
                         flex flex-col gap-4
-                    "
+                        transition-discrete duration-950 ease-out
+                        ${visibleUnidades
+                            ? 'opacity-100 translate-y-0 pointer-events-auto'
+                            : 'opacity-0 translate-y-30 pointer-events-none'
+                        }`}
+
+
                 >
                     {/* Logo (placeholder) */}
                     <div
