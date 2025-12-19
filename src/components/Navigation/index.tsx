@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 export const Navigation = () => {
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
@@ -17,7 +17,11 @@ export const Navigation = () => {
         );
 
         observer.observe(trigger);
-        return () => observer.disconnect();
+        return () => {
+            observer.disconnect();
+            
+            console.log('Apareci Nav')
+        }
     }, []);
 
     return (
@@ -28,7 +32,7 @@ export const Navigation = () => {
                 bg-gray-500/60
                 rounded-b-3xl
                 shadow-[0_10px_16px_4px_rgba(0,0,0,0.45)]
-                transition-all
+                transition-discrete
                 fixed top-0 left-0 backdrop-blur-sm duration-700 ease-out
                 ${
                 visible
