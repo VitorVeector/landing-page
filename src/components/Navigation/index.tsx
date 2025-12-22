@@ -76,9 +76,7 @@ export const Navigation = () => {
                         "
                     >
                         <li>Início</li>
-                        <li>Muay Thai</li>
-                        <li>Feminino</li>
-                        <li>Kids</li>
+                        <li>Modalidades</li>
                         <li>Unidades e Contato</li>
                         <li>Sobre</li>
                     </ul>
