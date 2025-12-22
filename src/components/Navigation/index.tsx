@@ -19,8 +19,6 @@ export const Navigation = () => {
         observer.observe(trigger);
         return () => {
             observer.disconnect();
-            
-            console.log('Apareci Nav')
         }
     }, []);
 
@@ -119,9 +117,7 @@ export const Navigation = () => {
                         "
                     >
                         <li onClick={() => setMenuOpen(false)}>Início</li>
-                        <li onClick={() => setMenuOpen(false)}>Muay Thai</li>
-                        <li onClick={() => setMenuOpen(false)}>Feminino</li>
-                        <li onClick={() => setMenuOpen(false)}>Kids</li>
+                        <li onClick={() => setMenuOpen(false)}>Modalidades</li>
                         <li onClick={() => setMenuOpen(false)}>Unidades e Contato</li>
                         <li onClick={() => setMenuOpen(false)}>Sobre</li>
                     </ul>

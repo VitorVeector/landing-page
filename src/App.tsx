@@ -22,7 +22,9 @@ function App() {
             </div>
             <div id="nav-trigger" className="h-0" />
             <Modalidades />
+            <div id="nav-trigger" className="h-0" />
             <Unidades />
+            <div id="nav-trigger" className="h-0" />
             <About />
         </>
     );
